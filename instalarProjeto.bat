@@ -65,7 +65,7 @@ if %opcao% equ 1 (
     echo *      Iniciando Servidor Django              *
     echo ===============================================================
     start cmd /k "cd /d "!folderPath!" & python manage.py runserver"
-    start http://127.0.0.1:8000/login
+    start http://127.0.0.1:8000/login/
     pause
 ) else if %opcao% equ 8 (
     echo ================================================================
