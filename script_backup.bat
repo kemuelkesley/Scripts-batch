@@ -44,7 +44,9 @@ if %opcao% equ 1 (
     call "!folderPath!\env\Scripts\activate"
     set ambiente_ativo=1
     timeout /t 2
-) else if defined ambiente_ativo (
+)
+
+if defined ambiente_ativo (
     if %opcao% equ 4 (
         echo ===============================================================
         echo *      Instalando dependências                *
@@ -82,8 +84,5 @@ if %opcao% equ 1 (
         echo Opcao invalida. Escolha outra opcao do menu.
         pause
     )
-) else if not %opcao% geq 1 if not %opcao% leq 9 (
-    echo Opcao invalida. Escolha outra opcao do menu.
-    pause
-)
+) 
 goto menu

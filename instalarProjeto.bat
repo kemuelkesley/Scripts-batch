@@ -33,7 +33,8 @@ if %opcao% equ 1 (
     echo *      Instalando ambiente virtual            *
     echo ===============================================================
     pushd "!folderPath!"
-    pip install virtualenv
+    ::pip install virtualenv
+    python -m venv env
     virtualenv env
     popd
 ) else if %opcao% equ 3 (
